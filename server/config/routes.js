@@ -1,7 +1,5 @@
-var videos = require('../controllers/videos'),
-	mongoose = require('mongoose'),
-	Video = mongoose.model('Video'),
-	users = require('../controllers/users');
+var schedule = require('../controllers/schedules'),
+	mongoose = require('mongoose');
 
 module.exports = function (app) {
 
@@ -26,13 +24,4 @@ module.exports = function (app) {
 			iOculusUser: request.user,
 		});
 	});
-
-
-	// io.on('connection', function (socket) {
-	// 	socket.emit('news', { hello: 'world' });
-	// 	socket.on('my other event', function (data) {
-	// 		console.log(data);
-	// 	});
-	// });
-
 };

@@ -4,11 +4,7 @@ var schedule = require('../controllers/schedules'),
 module.exports = function (app) {
 
     //Routes for Apps
-	app.post('/api/postPlaylist', videos.createPlaylist);
-
-    //Routes for Oculus
-	app.get('/oculus/getplaylist/', videos.getPlaylist);
-	app.get('/oculus/getuser/', users.getUserProfile);
+	app.post('/api/GetAllSchedules', schedule.GetAllSchedules);
 	
     //Connect with the partials in public
 	app.get('/partials/*', function (request, response) {

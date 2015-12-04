@@ -1,0 +1,40 @@
+{
+  "name": "iOculus",
+  "version": "1.0.0",
+  "description": "Interactive Oculus virtual reality cinema",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "0.12.x",
+    "npm": "2.5.x"
+  },
+  "author": "MatrixCore",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.12.2",
+    "cookie-parser": "*",
+    "express": "^4.12.3",
+    "express-session": "*",
+    "jade": "^1.9.2",
+    "mongodb": "*",
+    "mongoose": "^4.0.1",
+    "mongoose-unique-validator": "^0.4.1",
+    "morgan": "^1.5.2",
+    "passport": "*",
+    "passport-local": "^1.0.0",
+    "shortid": "*",
+    "socket.io": "^1.3.7",
+    "stylus": "^0.50.0"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.2.0",
+    "karma": "^0.12.31",
+    "karma-chai-plugins": "^0.5.0",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.5",
+    "karma-mocha": "^0.1.10",
+    "mocha": "^2.2.4"
+  }
+}

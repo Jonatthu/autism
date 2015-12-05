@@ -1,8 +1,8 @@
 var mongoose = require('mongoose');
 
 var ScheduleSchema = mongoose.Schema({
-	Description: { type: String},
-	Image: { type: String}
+	Description: { type: String },
+	Image: { type: String }
 });
 
 var Schedule = mongoose.model('Schedule', ScheduleSchema);

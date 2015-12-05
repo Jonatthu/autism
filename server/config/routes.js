@@ -4,7 +4,7 @@ var schedule = require('../controllers/schedules'),
 module.exports = function (app) {
 
     //Routes for Apps
-	app.post('/api/GetAllSchedules', schedule.GetAllSchedules);
+	app.get('/api/GetAllSchedules', schedule.GetAllSchedules);
 	
     //Connect with the partials in public
 	app.get('/partials/*', function (request, response) {

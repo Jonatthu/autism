@@ -1,19 +1,16 @@
-var mongoose = require('mongoose'),
-	uniqueValidator = require('mongoose-unique-validator');
+var mongoose = require('mongoose');
 
 var ScheduleSchema = mongoose.Schema({
-	Description: { type: String, required: '{PATH} is required!' },
-	Image: { type: String, required: '{PATH} is required!' }
+	Description: { type: String},
+	Image: { type: String}
 });
-
-
-ScheduleSchema.plugin(uniqueValidator);
 
 var Schedule = mongoose.model('Schedule', ScheduleSchema);
 
 function createDefaultSchedules() {
 	Schedule.find({}).exec(function (err, collection) {
 		if (collection.length === 0) {
+			console.log("Crear BD");
 			Schedule.create({
 				Description: 'Jonatthu',
 				Image: 'Nomelosse'

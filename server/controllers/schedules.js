@@ -16,7 +16,7 @@ exports.DeteleSchedule = function (req, res) {
 }
 
 exports.NewSchedule = function (req, res) {
-	var Body = [{ Description: req.params.desc, Image: req.params.img }];
+	var Body = [{ Description: req.params.des, Image: req.params.img }];
 	console.log(Body);
 
 	Schedules.create(Body, function (err, post) {

@@ -16,7 +16,10 @@ exports.DeteleSchedule = function (req, res) {
 }
 
 exports.NewSchedule = function (req, res) {
-	Schedules.create(req.body, function (err, post) {
+	var Body = [{ Description: req.params.desc, Image: req.params.img }];
+	console.log(Body);
+
+	Schedules.create(Body, function (err, post) {
 		if (err) {
 			err = new Error('Something went wrong');
 			res.status(400);
@@ -24,6 +27,6 @@ exports.NewSchedule = function (req, res) {
 				reason: err.toString()
 			}));
 		}
-		res.json([req.body]);
+		res.json(["success"]);
 	});
 }

@@ -6,7 +6,7 @@ module.exports = function (app) {
     //Routes for Apps
 	app.get('/api/GetAllSchedules', schedule.GetAllSchedules);
 	app.get('/api/Delete/:id', schedule.DeteleSchedule);
-	app.post('/api/NewSchedule', schedule.NewSchedule);
+	app.get('/api/NewSchedule/:des/:img', schedule.NewSchedule);
 	
 	
     //Connect with the partials in public
